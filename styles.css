@@ -54,3 +54,55 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+/* Chatbot CSS */
+#chatbox {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#productSelect, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+#additionalOptions, #contactInfo {
+    margin-top: 15px;
+}
+
+#chatbot {
+    padding: 40px;
+    background-color: #eaf4fc;
+    border-radius: 10px;
+}

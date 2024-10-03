@@ -11,7 +11,7 @@
         <h1>WELCOME TO JIBIA MULTIRESOURCES NIGERIA</h1>
         <p>Dealer in all kinds of foodstuff and Distributor of Dangote, BUA, and Mangal Cement</p>
     </header>
-
+    
     <section id="about">
         <h2>ABOUT US</h2>
         <p>
@@ -22,6 +22,26 @@
         <p>Head Office: LIFE Gate Clinics Street, Obajana, Kogi State</p>
         <p>Email: <a href="mailto:jibiamultiresources@gmail.com">jibiamultiresources@gmail.com</a></p>
         <p>Phone: 07067713170</p>
+    </section>
+    <!-- Chatbot Section -->
+    <section id="chatbot">
+    <h2>Chat with Us!</h2>
+    <div id="chatbox">
+        <p><strong>Bot:</strong> Welcome to Jibia Multiresources Company! What do you want to shop with us?</p>
+        <select id="productSelect" onchange="handleProductSelect()">
+            <option value="">Select a product...</option>
+            <option value="Rice">Rice</option>
+            <option value="Dangote Cement">Dangote Cement</option>
+            <option value="BUA Cement">BUA Cement</option>
+            <option value="Mangal Cement">Mangal Cement</option>
+            <option value="Spaghetti">Spaghetti</option>
+            <option value="Macaroni">Macaroni</option>
+            <option value="Provision Store">Provision Store</option>
+            <option value="POS Services">POS Services</option>
+        </select>
+    </div>
+    <div id="additionalOptions"></div>
+    <div id="contactInfo"></div>
     </section>
 
     <section id="products">
@@ -75,5 +95,61 @@
     <footer>
         <p>&copy; 2024 JIBIA MULTIRESOURCES NIGERIA | All Rights Reserved</p>
     </footer>
+<script>
+    function handleProductSelect() {
+        const product = document.getElementById('productSelect').value;
+        let additionalOptionsHTML = '';
+        
+        if (product === 'Rice') {
+            additionalOptionsHTML = '<p><strong>Bot:</strong> Which type of rice would you like? (Foreign or Local)</p>' +
+                                    '<select id="riceType">' +
+                                    '<option value="Foreign">Foreign Rice</option>' +
+                                    '<option value="Local">Local Rice</option>' +
+                                    '</select>';
+        } else if (product === 'Dangote Cement') {
+            additionalOptionsHTML = '<p><strong>Bot:</strong> Please select the type of Dangote Cement:</p>' +
+                                    '<select id="dangoteType">' +
+                                    '<option value="3X">3X</option>' +
+                                    '<option value="Falcon">Falcon</option>' +
+                                    '<option value="BlocMaster">BlocMaster</option>' +
+                                    '</select>';
+        } else if (product === 'BUA Cement') {
+            additionalOptionsHTML = '<p><strong>Bot:</strong> Please select the type of BUA Cement:</p>' +
+                                    '<select id="buaType">' +
+                                    '<option value="Standard">Standard BUA</option>' +
+                                    '<option value="Maikobo">Maikobo BUA</option>' +
+                                    '</select>';
+        } else if (product === 'Mangal Cement') {
+            additionalOptionsHTML = '<p><strong>Bot:</strong> Mangal Cement is available in standard format.</p>';
+        } else if (product === 'Spaghetti') {
+            additionalOptionsHTML = '<p><strong>Bot:</strong> Which type of spaghetti would you like? (Foreign or Local)</p>' +
+                                    '<select id="spaghettiType">' +
+                                    '<option value="Foreign">Foreign Spaghetti</option>' +
+                                    '<option value="Local">Local Spaghetti</option>' +
+                                    '</select>';
+        } else if (product === 'Macaroni') {
+            additionalOptionsHTML = '<p><strong>Bot:</strong> Which type of macaroni would you like? (Foreign or Local)</p>' +
+                                    '<select id="macaroniType">' +
+                                    '<option value="Foreign">Foreign Macaroni</option>' +
+                                    '<option value="Local">Local Macaroni</option>' +
+                                    '</select>';
+        } else if (product === 'Provision Store') {
+            additionalOptionsHTML = '<p><strong>Bot:</strong> We offer a variety of items such as sugar, milk, beverages. What would you like?</p>';
+        } else if (product === 'POS Services') {
+            additionalOptionsHTML = '<p><strong>Bot:</strong> Our POS services are available for fast, secure transactions. What service would you like?</p>';
+        }
+
+        additionalOptionsHTML += '<br><button onclick="finishChat()">Submit</button>';
+        document.getElementById('additionalOptions').innerHTML = additionalOptionsHTML;
+    }
+
+    function finishChat() {
+        const contactInfoHTML = '<p><strong>Bot:</strong> Thank you for shopping with us! Please contact the CEO of the company via the following details:</p>' +
+                                '<p>Email: <a href="mailto:jibiamultiresources@gmail.com">jibiamultiresources@gmail.com</a></p>' +
+                                '<p>Phone: 07067713170</p>';
+        document.getElementById('contactInfo').innerHTML = contactInfoHTML;
+    }
+</script>
+
 </body>
 </html>

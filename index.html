@@ -3,15 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JIBIA MULTIRESOURCES NIGERIA</title>
+    <title>Jibia Multi Resources Nigeria</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <h1>WELCOME TO JIBIA MULTIRESOURCES NIGERIA</h1>
+        <h1>WELCOME TO JIBIA MULTI RESOURCES NIGERIA</h1>
         <p>Dealer in all kinds of foodstuff and Distributor of Dangote, BUA, and Mangal Cement</p>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#products">Products</a>
+            <a href="#order">Order Now</a>
+            <a href="#admin">Admin Login</a>
+        </nav>
     </header>
-    
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to Our Website</h2>
+        <p>At Jibia Multi Resources Nigeria, we are committed to providing top-quality products and exceptional service.</p>
+        <p>Explore our products and place your orders easily through our online form.</p>
+    </section>
+
+    <!-- About Section -->
     <section id="about">
         <h2>ABOUT US</h2>
         <p>
@@ -20,30 +36,11 @@
             Our goal is to provide quality materials at competitive prices.
         </p>
         <p>Head Office: LIFE Gate Clinics Street, Obajana, Kogi State</p>
-        <p>Email: <a href="mailto:jibiamultiresources@gmail.com">jibiamultiresources@gmail.com</a></p>
+        <p>Email: <a href="mailto:jibiamultresourcesobj@gmail.com">jibiamultresourcesobj@gmail.com</a></p>
         <p>Phone: 07067713170</p>
     </section>
-    <!-- Chatbot Section -->
-    <section id="chatbot">
-    <h2>Chat with Us!</h2>
-    <div id="chatbox">
-        <p><strong>Bot:</strong> Welcome to Jibia Multiresources Company! What do you want to shop with us?</p>
-        <select id="productSelect" onchange="handleProductSelect()">
-            <option value="">Select a product...</option>
-            <option value="Rice">Rice</option>
-            <option value="Dangote Cement">Dangote Cement</option>
-            <option value="BUA Cement">BUA Cement</option>
-            <option value="Mangal Cement">Mangal Cement</option>
-            <option value="Spaghetti">Spaghetti</option>
-            <option value="Macaroni">Macaroni</option>
-            <option value="Provision Store">Provision Store</option>
-            <option value="POS Services">POS Services</option>
-        </select>
-    </div>
-    <div id="additionalOptions"></div>
-    <div id="contactInfo"></div>
-    </section>
 
+    <!-- Products Section -->
     <section id="products">
         <h2>OUR PRODUCTS</h2>
         <div class="product-list">
@@ -60,96 +57,155 @@
             <div class="product">
                 <h3>Mangal Cement</h3>
                 <p>Mangal Cement is a fast-growing brand, offering reliability and cost-effectiveness for construction.</p>
-                <img src="Dangote-Cement.jpg" alt="Mangal Cement">
+                <img src="magal.jpg" alt="Mangal Cement">
             </div>
-
-            <!-- New Products Section -->
             <div class="product">
                 <h3>Rice</h3>
-                <p>We supply premium-quality rice, carefully selected and processed to meet your household and commercial needs.</p>
+                <p>Our high-quality rice is sourced from the best farms, ensuring you get the best flavor and nutrition.</p>
                 <img src="rice.jpg" alt="Rice">
             </div>
             <div class="product">
-                <h3>Spaghetti</h3>
-                <p>Our spaghetti is made from the finest wheat, ensuring a delicious and nutritious meal for your family.</p>
-                <img src="spaag.jpg" alt="Spaghetti">
+                <h3>POS (Point of Sale)</h3>
+                <p>Reliable and efficient POS systems for your business needs, enhancing your sales processes.</p>
+                <img src="pos.jpg" alt="POS">
             </div>
             <div class="product">
                 <h3>Macaroni</h3>
-                <p>Choose our macaroni for a versatile and tasty meal option. It's perfect for a variety of dishes and quick to prepare.</p>
+                <p>Delicious macaroni perfect for a variety of dishes, made from high-quality ingredients.</p>
                 <img src="macroni.jpg" alt="Macaroni">
             </div>
             <div class="product">
-                <h3>POS Services</h3>
-                <p>Fast, reliable, and secure POS services to make your transactions easier and more convenient.</p>
-                <img src="pos.jpg" alt="POS Services">
-            </div>
-            <div class="product">
-                <h3>Provision Stores</h3>
-                <p>We offer a wide range of provisions to meet your daily needs. From food items to household essentials, we've got you covered.</p>
-                <img src="provision.jpg" alt="Provision Store">
+                <h3>Provision Store Items</h3>
+                <p>We offer a wide range of provision store items including canned goods, snacks, and beverages.</p>
+                <img src="provision.jpg" alt="Provision Store Items">
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 JIBIA MULTIRESOURCES NIGERIA | All Rights Reserved</p>
-    </footer>
-<script>
-    function handleProductSelect() {
-        const product = document.getElementById('productSelect').value;
-        let additionalOptionsHTML = '';
+    <!-- Order Section -->
+    <section id="order">
+        <h2>Place Your Order</h2>
+        <form id="orderForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="state">State:</label>
+            <select id="state" name="state" required onchange="populateLocalGovernment()">
+                <option value="">Select your state</option>
+                <option value="Abia">Abia</option>
+                <option value="Adamawa">Adamawa</option>
+                <option value="Akwa Ibom">Akwa Ibom</option>
+                <option value="Anambra">Anambra</option>
+                <option value="Bauchi">Bauchi</option>
+                <option value="Bayelsa">Bayelsa</option>
+                <option value="Benue">Benue</option>
+                <option value="Borno">Borno</option>
+                <option value="Cross River">Cross River</option>
+                <option value="Delta">Delta</option>
+                <option value="Ebonyi">Ebonyi</option>
+                <option value="Edo">Edo</option>
+                <option value="Ekiti">Ekiti</option>
+                <option value="Enugu">Enugu</option>
+                <option value="Gombe">Gombe</option>
+                <option value="Imo">Imo</option>
+                <option value="Jigawa">Jigawa</option>
+                <option value="Kaduna">Kaduna</option>
+                <option value="Kano">Kano</option>
+                <option value="Katsina">Katsina</option>
+                <option value="Kebbi">Kebbi</option>
+                <option value="Kogi">Kogi</option>
+                <option value="Kwara">Kwara</option>
+                <option value="Lagos">Lagos</option>
+                <option value="Nasarawa">Nasarawa</option>
+                <option value="Niger">Niger</option>
+                <option value="Ogun">Ogun</option>
+                <option value="Ondo">Ondo</option>
+                <option value="Osun">Osun</option>
+                <option value="Oyo">Oyo</option>
+                <option value="Plateau">Plateau</option>
+                <option value="Rivers">Rivers</option>
+                <option value="Sokoto">Sokoto</option>
+                <option value="Taraba">Taraba</option>
+                <option value="Yobe">Yobe</option>
+                <option value="Zamfara">Zamfara</option>
+                <option value="FCT">Federal Capital Territory (FCT)</option>
+            </select>
+
+            <label for="local-government">Local Government:</label>
+            <select id="local-government" name="local-government" required>
+                <option value="">Select your local government</option>
+            </select>
+
+            <label for="address">Delivery Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="product">Select Product:</label>
+            <select id="product" name="product" required onchange="populateProductOptions()">
+                <option value="">Select Product</option>
+                <option value="rice">Rice</option>
+                <option value="cement">Cement</option>
+                <option value="spaghetti">Spaghetti</option>
+                <option value="macaroni">Macaroni</option>
+            </select>
+
+            <label for="product-option">Product Option:</label>
+            <select id="product-option" name="product-option" required>
+                <option value="">Select Product Option</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+
+    <!-- Admin Section -->
+    <section id="admin">
+        <h2>Admin Login</h2>
+        <form id="adminLoginForm">
+            <label for="adminUsername">Username:</label>
+            <input type="text" id="adminUsername" name="adminUsername" required>
+            
+            <label for="adminPassword">Password:</label>
+            <input type="password" id="adminPassword" name="adminPassword" required>
+            
+            <button type="submit">Login</button>
+            <p id="loginError" style="color:red;display:none;">Incorrect username or password</p>
+        </form>
         
-        if (product === 'Rice') {
-            additionalOptionsHTML = '<p><strong>Bot:</strong> Which type of rice would you like? (Foreign or Local)</p>' +
-                                    '<select id="riceType">' +
-                                    '<option value="Foreign">Foreign Rice</option>' +
-                                    '<option value="Local">Local Rice</option>' +
-                                    '</select>';
-        } else if (product === 'Dangote Cement') {
-            additionalOptionsHTML = '<p><strong>Bot:</strong> Please select the type of Dangote Cement:</p>' +
-                                    '<select id="dangoteType">' +
-                                    '<option value="3X">3X</option>' +
-                                    '<option value="Falcon">Falcon</option>' +
-                                    '<option value="BlocMaster">BlocMaster</option>' +
-                                    '</select>';
-        } else if (product === 'BUA Cement') {
-            additionalOptionsHTML = '<p><strong>Bot:</strong> Please select the type of BUA Cement:</p>' +
-                                    '<select id="buaType">' +
-                                    '<option value="Standard">Standard BUA</option>' +
-                                    '<option value="Maikobo">Maikobo BUA</option>' +
-                                    '</select>';
-        } else if (product === 'Mangal Cement') {
-            additionalOptionsHTML = '<p><strong>Bot:</strong> Mangal Cement is available in standard format.</p>';
-        } else if (product === 'Spaghetti') {
-            additionalOptionsHTML = '<p><strong>Bot:</strong> Which type of spaghetti would you like? (Foreign or Local)</p>' +
-                                    '<select id="spaghettiType">' +
-                                    '<option value="Foreign">Foreign Spaghetti</option>' +
-                                    '<option value="Local">Local Spaghetti</option>' +
-                                    '</select>';
-        } else if (product === 'Macaroni') {
-            additionalOptionsHTML = '<p><strong>Bot:</strong> Which type of macaroni would you like? (Foreign or Local)</p>' +
-                                    '<select id="macaroniType">' +
-                                    '<option value="Foreign">Foreign Macaroni</option>' +
-                                    '<option value="Local">Local Macaroni</option>' +
-                                    '</select>';
-        } else if (product === 'Provision Store') {
-            additionalOptionsHTML = '<p><strong>Bot:</strong> We offer a variety of items such as sugar, milk, beverages. What would you like?</p>';
-        } else if (product === 'POS Services') {
-            additionalOptionsHTML = '<p><strong>Bot:</strong> Our POS services are available for fast, secure transactions. What service would you like?</p>';
-        }
+        <div id="adminPanel" style="display:none;">
+            <h3>Customer Orders</h3>
+            <table id="ordersTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>State</th>
+                        <th>Local Government</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Product</th>
+                        <th>Product Option</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Orders will be added here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </section>
 
-        additionalOptionsHTML += '<br><button onclick="finishChat()">Submit</button>';
-        document.getElementById('additionalOptions').innerHTML = additionalOptionsHTML;
-    }
+    <!-- Footer Section -->
+    <footer>
+        <p>Contact us: <a href="mailto:jibiamultresourcesobj@gmail.com">jibiamultresourcesobj@gmail.com</a> | Phone: 07067713170</p>
+        <p>&copy; 2024 Jibia Multi Resources Nigeria</p>
+    </footer>
 
-    function finishChat() {
-        const contactInfoHTML = '<p><strong>Bot:</strong> Thank you for shopping with us! Please contact the CEO of the company via the following details:</p>' +
-                                '<p>Email: <a href="mailto:jibiamultiresources@gmail.com">jibiamultiresources@gmail.com</a></p>' +
-                                '<p>Phone: 07067713170</p>';
-        document.getElementById('contactInfo').innerHTML = contactInfoHTML;
-    }
-</script>
-
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
 </body>
 </html>

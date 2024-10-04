@@ -1,34 +1,112 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Updated background color for consistency */
 }
 
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 20px;
+    padding: 20px; /* Increased padding for better spacing */
     text-align: center;
 }
 
 h1 {
-    margin: 0;
+    margin: 0; /* Removed default margin for h1 */
+}
+
+h2 {
+    color: #333; /* Keep this for headings in sections */
 }
 
 section {
     padding: 20px;
     margin: 20px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 10px; /* Added rounded corners for sections */
 }
 
-#about p, #products p {
-    line-height: 1.6;
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Added rounded corners for the form */
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input,
+form select,
+form button {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for buttons */
+}
+
+form button:hover {
+    background-color: #45a049; /* Darker green for hover effect */
+}
+
+footer {
+    text-align: center;
+    padding: 10px; /* Adjusted padding for better balance */
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+#adminPanel {
+    display: none;
+}
+
+#ordersTable {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+#ordersTable th,
+#ordersTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#ordersTable th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Product Section Styles */
+#about p,
+#products p {
+    line-height: 1.6; /* Improved readability */
 }
 
 #products {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Slightly lighter background for product section */
 }
 
 .product-list {
@@ -38,71 +116,12 @@ section {
 }
 
 .product {
-    width: 30%;
+    width: 30%; /* Maintain proportion for product display */
     text-align: center;
 }
 
 .product img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-/* Chatbot CSS */
-#chatbox {
-    background-color: #f7f7f7;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 400px;
-    margin: 20px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#productSelect, select {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    font-size: 14px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-p {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #333;
-}
-
-#additionalOptions, #contactInfo {
-    margin-top: 15px;
-}
-
-#chatbot {
-    padding: 40px;
-    background-color: #eaf4fc;
-    border-radius: 10px;
+    border-radius: 10px; /* Rounded corners for product images */
 }
